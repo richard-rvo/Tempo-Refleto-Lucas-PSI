@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proposta de Desenvolvimento do Tempo Refleto: Aplicativo de Registro de Pensamentos com base em Terapia Cognitivo-Comportamental (TCC). App Mobile + Painel Web.">
+  <title>Tempo Refleto — Proposta de Desenvolvimento</title>
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero / Header -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="badge">
+        <span>🧠</span>
+        <span>Proposta de Desenvolvimento</span>
+      </div>
+      <h1 class="project-title" id="main-heading">Tempo Refleto</h1>
+      <p class="hero-desc">Aplicativo de Registro de Pensamentos com base em Terapia Cognitivo-Comportamental (TCC)</p>
+      <p class="hero-meta">App Mobile (iOS + Android) + Painel Web do Profissional</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav" aria-label="Navegação Principal">
+    <button class="nav-tab active" data-tab="produto" id="tab-produto">O Produto</button>
+    <button class="nav-tab" data-tab="funcionalidades" id="tab-funcionalidades">Funcionalidades</button>
+    <button class="nav-tab" data-tab="proposta" id="tab-proposta">Investimento</button>
+  </nav>
+
+  <!-- Content Sections -->
+  <main class="content-container">
+
+    <!-- Seção O Produto -->
+    <section id="section-produto" class="content-section active">
+      <div class="problem-statement">
+        <h2 class="section-title">O problema atual</h2>
+        <p>
+          Registros de pensamento feitos em papel ou formulários genéricos se perdem, chegam ao profissional por email sem estrutura, e o paciente não tem visibilidade do próprio progresso ao longo do tempo. Além disso, dados de saúde mental enviados por email sem criptografia representam risco à LGPD.
+        </p>
+      </div>
+
+      <!-- Mockups Container -->
+      <div class="mockups-grid">
+        
+        <!-- App do Paciente (Mobile Mockup) -->
+        <div class="mockup-column">
+          <h3 class="mockup-title">App do Paciente</h3>
+          
+          <div class="phone-mockup" id="phone-container">
+            <div class="phone-frame">
+              
+              <!-- Notch -->
+              <div class="phone-notch">
+                <div class="notch-bar"></div>
+              </div>
+              
+              <!-- App Header -->
+              <div class="phone-header">
+                <p class="user-greeting">Olá, Maria</p>
+                <p class="phone-prompt">Como você está hoje?</p>
+              </div>
+
+              <!-- Phone Content -->
+              <div class="phone-body">
+                
+                <!-- Screen 1: Checkin -->
+                <div id="phone-screen-checkin" class="phone-screen active">
+                  
+                  <!-- Checkin Card -->
+                  <div class="phone-card">
+                    <p class="card-title">Check-in do dia</p>
+                    
+                    <div class="mood-grid">
+                      <div class="mood-item active" data-mood="joy" data-color="var(--joy)">
+                        <span class="mood-emoji">😊</span>
+                        <p class="mood-label">Alegria</p>
+                      </div>
+                      <div class="mood-item" data-mood="sadness" data-color="var(--sadness)">
+                        <span class="mood-emoji">😢</span>
+                        <p class="mood-label">Tristeza</p>
+                      </div>
+                      <div class="mood-item" data-mood="anger" data-color="var(--anger)">
+                        <span class="mood-emoji">😤</span>
+                        <p class="mood-label">Raiva</p>
+                      </div>
+                      <div class="mood-item" data-mood="anxiety" data-color="var(--anxiety)">
+                        <span class="mood-emoji">😰</span>
+                        <p class="mood-label">Ansiedade</p>
+                      </div>
+                    </div>
+                    
+                    <div class="intensity-container">
+                      <p class="intensity-label">Intensidade:</p>
+                      <div class="intensity-scale">
+                        <button class="intensity-dot active" data-value="1">1</button>
+                        <button class="intensity-dot active" data-value="2">2</button>
+                        <button class="intensity-dot active" data-value="3">3</button>
+                        <button class="intensity-dot" data-value="4">4</button>
+                        <button class="intensity-dot" data-value="5">5</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Quick Thought Card -->
+                  <div class="phone-card">
+                    <p class="card-title">📝 Registro rápido</p>
+                    <div class="thought-textarea" contenteditable="true" placeholder="Descreva a situação que gerou esse sentimento..."></div>
+                  </div>
+
+                  <!-- TCC Fields Card -->
+                  <div class="phone-card">
+                    <p class="card-title">Registro de Pensamento</p>
+                    <div class="tcc-fields-list">
+                      <div class="tcc-field-row"><span>Situação</span><span class="arrow">›</span></div>
+                      <div class="tcc-field-row"><span>Pensamento automático</span><span class="arrow">›</span></div>
+                      <div class="tcc-field-row"><span>Emoção</span><span class="arrow">›</span></div>
+                      <div class="tcc-field-row-muted"><span>Evidências a favor</span><span class="arrow">›</span></div>
+                      <div class="tcc-field-row-muted"><span>Evidências contra</span><span class="arrow">›</span></div>
+                      <div class="tcc-field-row-muted"><span>Pensamento alternativo</span><span class="arrow">›</span></div>
+                    </div>
+                  </div>
+
+                  <!-- CTA -->
+                  <button class="phone-cta-btn" id="btn-save-record">Salvar registro</button>
+                </div>
+
+                <!-- Screen 2: Historico -->
+                <div id="phone-screen-historico" class="phone-screen">
+                  <p class="screen-header-title">Meu histórico</p>
+                  
+                  <!-- Heatmap Card -->
+                  <div class="phone-card">
+                    <p class="card-title">Humor 2026</p>
+                    
+                    <div class="heatmap-container">
+                      <!-- Joy Row -->
+                      <div class="heatmap-row">
+                        <span class="heatmap-label">Alegria</span>
+                        <div class="heatmap-squares">
+                          <div class="square joy-sq" style="opacity: 0.66;"></div>
+                          <div class="square joy-sq" style="opacity: 0.83;"></div>
+                          <div class="square joy-sq" style="opacity: 0.49;"></div>
+                          <div class="square joy-sq" style="opacity: 1;"></div>
+                          <div class="square joy-sq" style="opacity: 0.83;"></div>
+                          <div class="square joy-sq" style="opacity: 0.66;"></div>
+                          <div class="square joy-sq" style="opacity: 0.83;"></div>
+                          <div class="square joy-sq" style="opacity: 1;"></div>
+                          <div class="square joy-sq" style="opacity: 0.66;"></div>
+                          <div class="square joy-sq" style="opacity: 0.83;"></div>
+                          <div class="square joy-sq" style="opacity: 1;"></div>
+                          <div class="square joy-sq" style="opacity: 0.83;"></div>
+                        </div>
+                      </div>
+                      
+                      <!-- Sadness Row -->
+                      <div class="heatmap-row">
+                        <span class="heatmap-label">Tristeza</span>
+                        <div class="heatmap-squares">
+                          <div class="square sad-sq" style="opacity: 0.49;"></div>
+                          <div class="square sad-sq" style="opacity: 0.66;"></div>
+                          <div class="square sad-sq" style="opacity: 0.83;"></div>
+                          <div class="square sad-sq" style="opacity: 0.49;"></div>
+                          <div class="square sad-sq" style="opacity: 0.66;"></div>
+                          <div class="square sad-sq" style="opacity: 0.49;"></div>
+                          <div class="square sad-sq" style="opacity: 0.49;"></div>
+                          <div class="square sad-sq" style="opacity: 0.32;"></div>
+                          <div class="square sad-sq" style="opacity: 0.66;"></div>
+                          <div class="square sad-sq" style="opacity: 0.49;"></div>
+                          <div class="square sad-sq" style="opacity: 0.32;"></div>
+                          <div class="square sad-sq" style="opacity: 0.49;"></div>
+                        </div>
+                      </div>
+
+                      <!-- Anger Row -->
+                      <div class="heatmap-row">
+                        <span class="heatmap-label">Raiva</span>
+                        <div class="heatmap-squares">
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.49;"></div>
+                          <div class="square ang-sq" style="opacity: 0.66;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.49;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.49;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                          <div class="square ang-sq" style="opacity: 0.32;"></div>
+                        </div>
+                      </div>
+
+                      <!-- Anxiety Row -->
+                      <div class="heatmap-row">
+                        <span class="heatmap-label">Ansiedade</span>
+                        <div class="heatmap-squares">
+                          <div class="square anx-sq" style="opacity: 0.49;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.49;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.49;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.49;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                          <div class="square anx-sq" style="opacity: 0.32;"></div>
+                        </div>
+                      </div>
+
+                      <!-- Months Legend -->
+                      <div class="heatmap-months">
+                        <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Timeline list -->
+                  <div class="phone-entries-list">
+                    <div class="entry-item">
+                      <span class="entry-emoji">😊</span>
+                      <div class="entry-text">
+                        <p class="entry-title">Reunião produtiva</p>
+                        <p class="entry-sub">28 Mai · Alegria</p>
+                      </div>
+                      <span class="arrow">›</span>
+                    </div>
+                    <div class="entry-item">
+                      <span class="entry-emoji">😰</span>
+                      <div class="entry-text">
+                        <p class="entry-title">Pressão no trabalho</p>
+                        <p class="entry-sub">26 Mai · Ansiedade</p>
+                      </div>
+                      <span class="arrow">›</span>
+                    </div>
+                    <div class="entry-item">
+                      <span class="entry-emoji">😢</span>
+                      <div class="entry-text">
+                        <p class="entry-title">Discussão com amigo</p>
+                        <p class="entry-sub">24 Mai · Tristeza</p>
+                      </div>
+                      <span class="arrow">›</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Phone Bottom Nav -->
+              <div class="phone-nav">
+                <button class="phone-nav-btn active" data-screen="checkin" id="phone-btn-checkin">
+                  <span class="icon">🏠</span>
+                  <span class="label">Início</span>
+                </button>
+                <button class="phone-nav-btn" data-screen="historico" id="phone-btn-historico">
+                  <span class="icon">📊</span>
+                  <span class="label">Histórico</span>
+                </button>
+                <button class="phone-nav-btn disabled" disabled>
+                  <span class="icon">⚙️</span>
+                  <span class="label">Config</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Controls under phone -->
+          <div class="mockup-controls">
+            <button class="control-btn active" data-screen="checkin" id="control-btn-checkin">Check-in</button>
+            <button class="control-btn" data-screen="historico" id="control-btn-historico">Histórico</button>
+          </div>
+        </div>
+
+        <!-- Painel do Profissional (Desktop Mockup) -->
+        <div class="mockup-column wide-mockup">
+          <h3 class="mockup-title">Painel do Profissional</h3>
+          
+          <div class="desktop-mockup">
+            
+            <!-- Browser Chrome Header -->
+            <div class="browser-header">
+              <div class="browser-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+              </div>
+              <div class="browser-address">
+                <p>app.temporefleto.com.br/dashboard</p>
+              </div>
+            </div>
+
+            <!-- Dashboard Content wrapper -->
+            <div class="dashboard-wrapper">
+              
+              <!-- Sidebar -->
+              <aside class="sidebar">
+                <p class="sidebar-logo">Tempo Refleto</p>
+                <div class="sidebar-menu">
+                  <div class="menu-item active">📋 Pacientes</div>
+                  <div class="menu-item">📊 Relatórios</div>
+                  <div class="menu-item">📅 Agenda</div>
+                  <div class="menu-item">⚙️ Config</div>
+                </div>
+              </aside>
+
+              <!-- Main Dashboard content -->
+              <div class="dashboard-main">
+                <div class="dashboard-header">
+                  <div>
+                    <h4 class="dashboard-title">Pacientes</h4>
+                    <p class="dashboard-subtitle">12 ativos · 3 novos registros hoje</p>
+                  </div>
+                  <button class="btn-add-patient">+ Adicionar</button>
+                </div>
+
+                <!-- Stats Cards Row -->
+                <div class="stats-row">
+                  <div class="stat-card">
+                    <p class="stat-label">Registros esta semana</p>
+                    <p class="stat-value">47</p>
+                    <p class="stat-trend">+12%</p>
+                  </div>
+                  <div class="stat-card">
+                    <p class="stat-label">Check-ins realizados</p>
+                    <p class="stat-value">89%</p>
+                    <p class="stat-trend">↑ 5%</p>
+                  </div>
+                  <div class="stat-card">
+                    <p class="stat-label">Humor médio</p>
+                    <p class="stat-value">😊 3.8</p>
+                    <p class="stat-trend">estável</p>
+                  </div>
+                </div>
+
+                <!-- Patient list table -->
+                <div class="patient-table-card">
+                  <div class="table-header">
+                    <div class="col-patient">Paciente</div>
+                    <div class="col-last">Último registro</div>
+                    <div class="col-mood">Humor</div>
+                    <div class="col-status">Status</div>
+                  </div>
+                  
+                  <div class="table-rows">
+                    <!-- Row 1 -->
+                    <div class="table-row">
+                      <div class="col-patient patient-profile">
+                        <div class="avatar">MS</div>
+                        <span class="patient-name">Maria S.</span>
+                      </div>
+                      <div class="col-last">Hoje, 10:24</div>
+                      <div class="col-mood"><span class="emoji-s">😊</span></div>
+                      <div class="col-status"><span class="badge active-badge">Ativo</span></div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="table-row">
+                      <div class="col-patient patient-profile">
+                        <div class="avatar">JP</div>
+                        <span class="patient-name">João P.</span>
+                      </div>
+                      <div class="col-last">Ontem</div>
+                      <div class="col-mood"><span class="emoji-s">😰</span></div>
+                      <div class="col-status"><span class="badge warning-badge">Atenção</span></div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="table-row">
+                      <div class="col-patient patient-profile">
+                        <div class="avatar">AR</div>
+                        <span class="patient-name">Ana R.</span>
+                      </div>
+                      <div class="col-last">28/05</div>
+                      <div class="col-mood"><span class="emoji-s">😢</span></div>
+                      <div class="col-status"><span class="badge active-badge">Ativo</span></div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="table-row">
+                      <div class="col-patient patient-profile">
+                        <div class="avatar">CM</div>
+                        <span class="patient-name">Carlos M.</span>
+                      </div>
+                      <div class="col-last">27/05</div>
+                      <div class="col-mood"><span class="emoji-s">😊</span></div>
+                      <div class="col-status"><span class="badge active-badge">Ativo</span></div>
+                    </div>
+                    <!-- Row 5 -->
+                    <div class="table-row">
+                      <div class="col-patient patient-profile">
+                        <div class="avatar">LF</div>
+                        <span class="patient-name">Lúcia F.</span>
+                      </div>
+                      <div class="col-last">25/05</div>
+                      <div class="col-mood"><span class="emoji-s">😤</span></div>
+                      <div class="col-status"><span class="badge warning-badge">Atenção</span></div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção Funcionalidades -->
+    <section id="section-funcionalidades" class="content-section">
+      <h2 class="features-main-title">Funcionalidades do Ecossistema</h2>
+      
+      <div class="features-grid">
+        
+        <!-- App do Paciente -->
+        <div class="feature-card">
+          <h3 class="feature-group-title">📱 App do Paciente</h3>
+          <div class="feature-items">
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Login seguro</p>
+                <p class="feature-desc">Autenticação com email/senha via Supabase Auth</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Check-in diário</p>
+                <p class="feature-desc">Registro rápido de humor (alegria, tristeza, raiva, ansiedade) com escala de intensidade</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Registro de pensamento TCC</p>
+                <p class="feature-desc">Formulário guiado: situação, pensamento automático, emoção, evidências, pensamento alternativo</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Histórico de registros</p>
+                <p class="feature-desc">Lista cronológica com busca e filtros por emoção</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Card anual de humor</p>
+                <p class="feature-desc">Visualização tipo heatmap do humor ao longo dos meses</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Notificações</p>
+                <p class="feature-desc">Lembretes configuráveis para check-in diário</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Painel do Profissional -->
+        <div class="feature-card">
+          <h3 class="feature-group-title">💻 Painel do Profissional</h3>
+          <div class="feature-items">
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Dashboard geral</p>
+                <p class="feature-desc">Visão consolidada de todos os pacientes, registros recentes e alertas</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Gestão de pacientes</p>
+                <p class="feature-desc">Cadastro, convite por email/link, ativação e desativação</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Visualização individual</p>
+                <p class="feature-desc">Todos os registros e check-ins do paciente com linha do tempo estruturada</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Indicadores de atenção</p>
+                <p class="feature-desc">Alertas automáticos para padrões preocupantes (alta frequência de humor negativo)</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Exportação</p>
+                <p class="feature-desc">Download de relatórios em PDF para anexar ao prontuário do paciente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infraestrutura -->
+        <div class="feature-card">
+          <h3 class="feature-group-title">🔒 Infraestrutura & Segurança</h3>
+          <div class="feature-items">
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Conformidade com LGPD</p>
+                <p class="feature-desc">Criptografia de dados de ponta a ponta, termos de consentimento explícito e exclusão de dados sob demanda</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Supabase Backend</p>
+                <p class="feature-desc">Backend gerenciado de alta performance com banco PostgreSQL, autenticação nativa e Row-Level Security (RLS)</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="bullet"></div>
+              <div>
+                <p class="feature-name">Publicação e Lojas</p>
+                <p class="feature-desc">Aplicativo publicado na App Store (iOS) e Google Play Store (Android)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção Investimento -->
+    <section id="section-proposta" class="content-section">
+      <h2 class="investment-main-title">Cronograma & Investimento</h2>
+      
+      <div class="investment-grid">
+        
+        <!-- Cronograma / Timeline -->
+        <div class="investment-card">
+          <h3 class="investment-card-title">Cronograma — 4 semanas</h3>
+          
+          <div class="timeline">
+            <!-- Stage 1 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="marker-circle">1</div>
+                <div class="marker-line"></div>
+              </div>
+              <div class="timeline-content">
+                <p class="step-meta">Etapa 1 · Semana 1</p>
+                <h4 class="step-title">Planejamento e Design</h4>
+                <p class="step-desc">PRD (Documento de Requisitos), fluxos de tela, definição da identidade visual e protótipo navegável de alta fidelidade.</p>
+                <p class="step-note">✅ Aprovação do cliente antes de iniciar implementação</p>
+              </div>
+            </div>
+            
+            <!-- Stage 2 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="marker-circle">2</div>
+                <div class="marker-line"></div>
+              </div>
+              <div class="timeline-content">
+                <p class="step-meta">Etapa 2 · Semanas 2-3</p>
+                <h4 class="step-title">Implementação</h4>
+                <p class="step-desc">Desenvolvimento do aplicativo móvel, painel de controle web, integração do backend com Supabase e autenticação.</p>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="timeline-step">
+              <div class="timeline-marker">
+                <div class="marker-circle">3</div>
+              </div>
+              <div class="timeline-content">
+                <p class="step-meta">Etapa 3 · Semana 4</p>
+                <h4 class="step-title">Testes e Publicação</h4>
+                <p class="step-desc">Testes reais com pacientes piloto, correções de bugs, polimento final e submissão do app nas lojas App Store e Google Play.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Valores e Condições -->
+        <div class="investment-card values-card">
+          <h3 class="investment-card-title">Valores</h3>
+          
+          <div class="values-list">
+            <div class="value-row">
+              <span>Etapa 1 — Planejamento e Design</span>
+            </div>
+            <div class="value-row">
+              <span>Etapa 2 — Implementação</span>
+            </div>
+            <div class="value-row">
+              <span>Etapa 3 — Testes e Publicação</span>
+            </div>
+            
+            <div class="value-row subtotal-row">
+              <span>Investimento Total do Projeto</span>
+              <strong>R$ 6.500</strong>
+            </div>
+
+            <!-- Costs repassados -->
+            <div class="external-costs-container">
+              <p class="external-costs-title">* Observação: Custos diretos do contratante referentes às lojas de aplicativo não estão inclusos neste valor.</p>
+              <div class="external-cost-row">
+                <span>Apple Developer Program (anual)</span>
+                <span>US$ 99 (~R$ 550)</span>
+              </div>
+              <div class="external-cost-row">
+                <span>Google Play Console (taxa única)</span>
+                <span>US$ 25 (~R$ 140)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Condições -->
+          <div class="conditions-box">
+            <h4 class="conditions-title">Condições de Pagamento</h4>
+            <div class="condition-items">
+              <div class="condition-item">
+                <span class="bullet-accent">◆</span>
+                <p><strong>40%</strong> na aprovação da proposta (R$ 2.600)</p>
+              </div>
+              <div class="condition-item">
+                <span class="bullet-accent">◆</span>
+                <p><strong>30%</strong> após conclusão da Etapa 2 (R$ 1.950)</p>
+              </div>
+              <div class="condition-item">
+                <span class="bullet-accent">◆</span>
+                <p><strong>30%</strong> na publicação final do app (R$ 1.950)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Manutenção -->
+          <div class="maintenance-box">
+            <p><strong>Manutenção opcional:</strong> Após a entrega, suporte técnico mensal e atualizações continuadas por R$ 400/mês.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <footer class="proposta-footer">
+        <p>Proposta válida por 15 dias · Prazo médio de entrega de 4 semanas após aprovação e sinal.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Global -->
+  <footer class="global-footer">
+    <div class="footer-content">
+      <p>Desenvolvido com carinho por RV</p>
+      <img src="logo completa branco.png" alt="RV Logo" class="footer-logo">
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
