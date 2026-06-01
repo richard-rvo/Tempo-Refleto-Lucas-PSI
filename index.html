@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Proposta de Desenvolvimento do Tempo Refleto: Aplicativo de Registro de Pensamentos com base em Terapia Cognitivo-Comportamental (TCC). App Mobile + Painel Web.">
+  <meta name="description"
+    content="Proposta de Desenvolvimento do Tempo Refleto: Aplicativo de Registro de Pensamentos com base em Terapia Cognitivo-Comportamental (TCC). App Mobile + Painel Web.">
   <title>Tempo Refleto — Proposta de Desenvolvimento</title>
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <link rel="icon" type="image/png"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Hero / Header -->
@@ -41,41 +47,43 @@
       <div class="problem-statement">
         <h2 class="section-title">O problema atual</h2>
         <p>
-          Registros de pensamento feitos em papel ou formulários genéricos se perdem, chegam ao profissional por email sem estrutura, e o paciente não tem visibilidade do próprio progresso ao longo do tempo. Além disso, dados de saúde mental enviados por email sem criptografia representam risco à LGPD.
+          Registros de pensamento feitos em papel ou formulários genéricos se perdem, chegam ao profissional por email
+          sem estrutura, e o paciente não tem visibilidade do próprio progresso ao longo do tempo. Além disso, dados de
+          saúde mental enviados por email sem criptografia representam risco à LGPD.
         </p>
       </div>
 
       <!-- Mockups Container -->
       <div class="mockups-grid">
-        
+
         <!-- App do Paciente (Mobile Mockup) -->
         <div class="mockup-column">
           <h3 class="mockup-title">App do Paciente</h3>
-          
+
           <div class="phone-mockup" id="phone-container">
             <div class="phone-frame">
-              
+
               <!-- Notch -->
               <div class="phone-notch">
                 <div class="notch-bar"></div>
               </div>
-              
+
               <!-- App Header -->
               <div class="phone-header">
-                <p class="user-greeting">Olá, Maria</p>
+                <p class="user-greeting">Olá, Richard</p>
                 <p class="phone-prompt">Como você está hoje?</p>
               </div>
 
               <!-- Phone Content -->
               <div class="phone-body">
-                
+
                 <!-- Screen 1: Checkin -->
                 <div id="phone-screen-checkin" class="phone-screen active">
-                  
+
                   <!-- Checkin Card -->
                   <div class="phone-card">
                     <p class="card-title">Check-in do dia</p>
-                    
+
                     <div class="mood-grid">
                       <div class="mood-item active" data-mood="joy" data-color="var(--joy)">
                         <span class="mood-emoji">😊</span>
@@ -94,7 +102,7 @@
                         <p class="mood-label">Ansiedade</p>
                       </div>
                     </div>
-                    
+
                     <div class="intensity-container">
                       <p class="intensity-label">Intensidade:</p>
                       <div class="intensity-scale">
@@ -110,7 +118,8 @@
                   <!-- Quick Thought Card -->
                   <div class="phone-card">
                     <p class="card-title">📝 Registro rápido</p>
-                    <div class="thought-textarea" contenteditable="true" placeholder="Descreva a situação que gerou esse sentimento..."></div>
+                    <div class="thought-textarea" contenteditable="true"
+                      placeholder="Descreva a situação que gerou esse sentimento..."></div>
                   </div>
 
                   <!-- TCC Fields Card -->
@@ -122,7 +131,8 @@
                       <div class="tcc-field-row"><span>Emoção</span><span class="arrow">›</span></div>
                       <div class="tcc-field-row-muted"><span>Evidências a favor</span><span class="arrow">›</span></div>
                       <div class="tcc-field-row-muted"><span>Evidências contra</span><span class="arrow">›</span></div>
-                      <div class="tcc-field-row-muted"><span>Pensamento alternativo</span><span class="arrow">›</span></div>
+                      <div class="tcc-field-row-muted"><span>Pensamento alternativo</span><span class="arrow">›</span>
+                      </div>
                     </div>
                   </div>
 
@@ -133,11 +143,11 @@
                 <!-- Screen 2: Historico -->
                 <div id="phone-screen-historico" class="phone-screen">
                   <p class="screen-header-title">Meu histórico</p>
-                  
+
                   <!-- Heatmap Card -->
                   <div class="phone-card">
                     <p class="card-title">Humor 2026</p>
-                    
+
                     <div class="heatmap-container">
                       <!-- Joy Row -->
                       <div class="heatmap-row">
@@ -157,7 +167,7 @@
                           <div class="square joy-sq" style="opacity: 0.83;"></div>
                         </div>
                       </div>
-                      
+
                       <!-- Sadness Row -->
                       <div class="heatmap-row">
                         <span class="heatmap-label">Tristeza</span>
@@ -282,9 +292,9 @@
         <!-- Painel do Profissional (Desktop Mockup) -->
         <div class="mockup-column wide-mockup">
           <h3 class="mockup-title">Painel do Profissional</h3>
-          
+
           <div class="desktop-mockup">
-            
+
             <!-- Browser Chrome Header -->
             <div class="browser-header">
               <div class="browser-dots">
@@ -299,7 +309,7 @@
 
             <!-- Dashboard Content wrapper -->
             <div class="dashboard-wrapper">
-              
+
               <!-- Sidebar -->
               <aside class="sidebar">
                 <p class="sidebar-logo">Tempo Refleto</p>
@@ -348,7 +358,7 @@
                     <div class="col-mood">Humor</div>
                     <div class="col-status">Status</div>
                   </div>
-                  
+
                   <div class="table-rows">
                     <!-- Row 1 -->
                     <div class="table-row">
@@ -417,9 +427,9 @@
     <!-- Seção Funcionalidades -->
     <section id="section-funcionalidades" class="content-section">
       <h2 class="features-main-title">Funcionalidades do Ecossistema</h2>
-      
+
       <div class="features-grid">
-        
+
         <!-- App do Paciente -->
         <div class="feature-card">
           <h3 class="feature-group-title">📱 App do Paciente</h3>
@@ -435,14 +445,16 @@
               <div class="bullet"></div>
               <div>
                 <p class="feature-name">Check-in diário</p>
-                <p class="feature-desc">Registro rápido de humor (alegria, tristeza, raiva, ansiedade) com escala de intensidade</p>
+                <p class="feature-desc">Registro rápido de humor (alegria, tristeza, raiva, ansiedade) com escala de
+                  intensidade</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="bullet"></div>
               <div>
                 <p class="feature-name">Registro de pensamento TCC</p>
-                <p class="feature-desc">Formulário guiado: situação, pensamento automático, emoção, evidências, pensamento alternativo</p>
+                <p class="feature-desc">Formulário guiado: situação, pensamento automático, emoção, evidências,
+                  pensamento alternativo</p>
               </div>
             </div>
             <div class="feature-item">
@@ -498,7 +510,8 @@
               <div class="bullet"></div>
               <div>
                 <p class="feature-name">Indicadores de atenção</p>
-                <p class="feature-desc">Alertas automáticos para padrões preocupantes (alta frequência de humor negativo)</p>
+                <p class="feature-desc">Alertas automáticos para padrões preocupantes (alta frequência de humor
+                  negativo)</p>
               </div>
             </div>
             <div class="feature-item">
@@ -519,14 +532,16 @@
               <div class="bullet"></div>
               <div>
                 <p class="feature-name">Conformidade com LGPD</p>
-                <p class="feature-desc">Criptografia de dados de ponta a ponta, termos de consentimento explícito e exclusão de dados sob demanda</p>
+                <p class="feature-desc">Criptografia de dados de ponta a ponta, termos de consentimento explícito e
+                  exclusão de dados sob demanda</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="bullet"></div>
               <div>
                 <p class="feature-name">Supabase Backend</p>
-                <p class="feature-desc">Backend gerenciado de alta performance com banco PostgreSQL, autenticação nativa e Row-Level Security (RLS)</p>
+                <p class="feature-desc">Backend gerenciado de alta performance com banco PostgreSQL, autenticação nativa
+                  e Row-Level Security (RLS)</p>
               </div>
             </div>
             <div class="feature-item">
@@ -545,13 +560,13 @@
     <!-- Seção Investimento -->
     <section id="section-proposta" class="content-section">
       <h2 class="investment-main-title">Cronograma & Investimento</h2>
-      
+
       <div class="investment-grid">
-        
+
         <!-- Cronograma / Timeline -->
         <div class="investment-card">
           <h3 class="investment-card-title">Cronograma — 4 semanas</h3>
-          
+
           <div class="timeline">
             <!-- Stage 1 -->
             <div class="timeline-step">
@@ -562,11 +577,12 @@
               <div class="timeline-content">
                 <p class="step-meta">Etapa 1 · Semana 1</p>
                 <h4 class="step-title">Planejamento e Design</h4>
-                <p class="step-desc">PRD (Documento de Requisitos), fluxos de tela, definição da identidade visual e protótipo navegável de alta fidelidade.</p>
-                <p class="step-note">✅ Aprovação do cliente antes de iniciar implementação</p>
+                <p class="step-desc">PRD (Documento de Requisitos), fluxos de tela, definição da identidade visual e
+                  protótipo navegável de alta fidelidade.</p>
+                <p class="step-note">✅ Aprovação do Psi. Lucas Nogueira antes de iniciar implementação</p>
               </div>
             </div>
-            
+
             <!-- Stage 2 -->
             <div class="timeline-step">
               <div class="timeline-marker">
@@ -576,7 +592,8 @@
               <div class="timeline-content">
                 <p class="step-meta">Etapa 2 · Semanas 2-3</p>
                 <h4 class="step-title">Implementação</h4>
-                <p class="step-desc">Desenvolvimento do aplicativo móvel, painel de controle web, integração do backend com Supabase e autenticação.</p>
+                <p class="step-desc">Desenvolvimento do aplicativo móvel, painel de controle web, integração do backend
+                  com Supabase e autenticação.</p>
               </div>
             </div>
 
@@ -588,7 +605,8 @@
               <div class="timeline-content">
                 <p class="step-meta">Etapa 3 · Semana 4</p>
                 <h4 class="step-title">Testes e Publicação</h4>
-                <p class="step-desc">Testes reais com pacientes piloto, correções de bugs, polimento final e submissão do app nas lojas App Store e Google Play.</p>
+                <p class="step-desc">Testes reais com pacientes piloto, correções de bugs, polimento final e submissão
+                  do app nas lojas App Store e Google Play.</p>
               </div>
             </div>
           </div>
@@ -598,7 +616,7 @@
         <!-- Valores e Condições -->
         <div class="investment-card values-card">
           <h3 class="investment-card-title">Valores</h3>
-          
+
           <div class="values-list">
             <div class="value-row">
               <span>Etapa 1 — Planejamento e Design</span>
@@ -609,7 +627,7 @@
             <div class="value-row">
               <span>Etapa 3 — Testes e Publicação</span>
             </div>
-            
+
             <div class="value-row subtotal-row">
               <span>Investimento Total do Projeto</span>
               <strong>R$ 6.500</strong>
@@ -617,7 +635,8 @@
 
             <!-- Costs repassados -->
             <div class="external-costs-container">
-              <p class="external-costs-title">* Observação: Custos diretos do contratante referentes às lojas de aplicativo não estão inclusos neste valor.</p>
+              <p class="external-costs-title">* Observação: Custos diretos do contratante referentes às lojas de
+                aplicativo não estão inclusos neste valor.</p>
               <div class="external-cost-row">
                 <span>Apple Developer Program (anual)</span>
                 <span>US$ 99 (~R$ 550)</span>
@@ -651,7 +670,8 @@
 
           <!-- Manutenção -->
           <div class="maintenance-box">
-            <p><strong>Manutenção opcional:</strong> Após a entrega, suporte técnico mensal e atualizações continuadas por R$ 400/mês.</p>
+            <p><strong>Manutenção opcional:</strong> Após a entrega, suporte técnico mensal e atualizações continuadas
+              por R$ 400/mês.</p>
           </div>
 
         </div>
@@ -675,4 +695,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
