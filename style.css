@@ -648,3 +648,15 @@ body::before {
 .footer-content p { font-size: 11px; color: rgba(255, 255, 255, 0.7); margin: 0; }
 .footer-logo { height: 20px; width: auto; opacity: 0.8; transition: opacity var(--transition-fast); }
 .footer-logo:hover { opacity: 1; }
+
+/* Custom investment list styling */
+.investment-intro { font-size: 16px; color: var(--primary); line-height: 1.6; margin-bottom: 16px; }
+.investment-intro strong { color: var(--accent); font-weight: 600; }
+.investment-rationale { background: var(--surface); padding: 16px; border-radius: 12px; border-left: 3px solid var(--accent); margin: 16px 0; }
+.investment-rationale p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; font-style: italic; }
+.whats-included { margin-top: 20px; }
+.included-title { font-family: var(--font-display); font-size: 15px; color: var(--secondary); margin-bottom: 12px; font-weight: 500; }
+.included-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.included-list li { display: flex; gap: 10px; font-size: 13px; color: var(--text-muted); line-height: 1.5; align-items: center; }
+.included-list li .bullet-accent { color: var(--accent); font-size: 12px; }
+
